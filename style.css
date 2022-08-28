@@ -467,10 +467,11 @@ button{
         padding: 0.8em 1em;
         background: var(--bg);
         transition: 0.2s;
-        width: 350px;
+        width: 250px;
+        margin: auto;
         height: 80px;
         font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
 
       /* STORAGE SECTION */

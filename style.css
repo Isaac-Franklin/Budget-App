@@ -7,7 +7,6 @@
 
 *:focus {
     outline: none;
-    /* position: relative; */
 }
 
 
@@ -128,10 +127,20 @@ input {
 
 .options{
     height: 40px;
-    font-weight: bold;
     /* padding: 10px; */
-    border: solid 2px black;
+    border: solid 3px black;
     /* margin-bottom: 10px; */
+    color: white;
+}
+
+.options:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+   }
+
+.options:hover {
+transform: translate(-0.05em, -0.05em);
+box-shadow: 0.15em 0.15em;
 }
 
 button{
@@ -165,7 +174,7 @@ button{
     background-color: rgb(217, 216, 216);
     display: grid;
     font-weight: 700;
-    width: 400px;
+    width: 90%;
     grid-template-columns: 5% 60% 30%;
     justify-content: space-between;
     padding: 10px 10px;
@@ -179,7 +188,7 @@ button{
     background-color: rgb(217, 216, 216);
     display: grid;
     font-weight: 700;
-    width: 400px;
+    width: 90%;
     grid-template-columns: 5% 60% 30%;
     justify-content: space-between;
     padding: 10px 10px;
@@ -237,7 +246,6 @@ button{
     font-weight: 900;
     font-size: 18px;
     border: 3px solid black;
-    /* border-radius: 0.4em; */
     box-shadow: 0.1em 0.1em;
     width: 180px;
     height: 50px;
@@ -258,8 +266,6 @@ button{
 @keyframes reveal {
     from {top: -1000px}
     to{top: 100px}
-    
-
 }
 
 .removeLocalstoragePage{
@@ -329,26 +335,29 @@ button{
     display: none;
 }
 
+
+ 
+/* START OF MEDIA QUERY SECTION BELOW */
 @media screen and (max-width: 800px) {
-    .mainUISection{
+    body{
+        text-align: center;
         width: 90%;
+        overflow-x: hidden;
+    }
+    .mainUISection{
+        width: 98%;
         margin: auto;
         display: list-item;
         grid-template-columns: 100%;
         /* color: whitesmoke; */
-        background-image: url(images/budgetpic.jpg);
+        background-image: none;
         justify-content: space-between;
         padding: 30px;
-    
     }
 
     .incomeUIsectionout{
         list-style: none;
         color: black;
-        
-        /* color: black; */
-
-        
     }
 
     .incomeUIsectionout h2{
@@ -368,18 +377,156 @@ button{
     }
 
     .line{
-        margin-top: 30px;
+        margin-bottom: 40px;
         display: block;
     }
-    input{
-        padding: 10px;
-        text-align: center;
-        font-size: 1rem;
-    }
-    .inputform{
-        display: grid;
-        grid-template-columns: 100%;
+
+    .incomeUI{
+        height: 15px;
+        font-size: 0.6rem;
+        width: 300px;
+        margin: auto;
+        background: linear-gradient(145deg, #1b8619, #177115);
+        box-shadow:  5px 5px 4px #146312,-5px -5px 4px #1e971c;
+        color: white;
         align-items: center;
-        outline: none;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .expenseUI{
+        height: 15px;
+        font-size: 0.6rem;
+        width: 300px;
+        margin: auto;
+        /* background-color: red; */
+        border-radius: 0px;
+        background: linear-gradient(145deg, #f10a0a, #cb0808);
+        box-shadow:  5px 5px 4px #b20707,-5px -5px 4px #ff0b0b;
+        margin-top: 10px;
+        color: white;
+        align-items: center;
+        padding: 20px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mainsection{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        text-align: center;
+        height: 100%;
+        width: 90vw;
+        padding: 20px;
+        z-index: 5;
+        
+    }
+    .amount{
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+        height:80px;
+    }
+
+    .description{
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+        height:80px;
+    }
+   
+
+    .options{
+        height: 50px;
+        width: 150px;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        border: solid 3px black;
+        /* margin-bottom: 10px; */
+        color: white;
+    }
+
+    .addbtn{
+        height: 50px;
+        width: 300px;
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .showalldata {
+        --bg: #000;
+        --hover-bg: rgb(0,128,0);
+        --hover-text: #000;
+        color: #fff;
+        border: 1px solid var(--bg);
+        /* border-radius: 4px; */
+        margin-top: 10px;
+        padding: 0.8em 1em;
+        background: var(--bg);
+        transition: 0.2s;
+        width: 350px;
+        height: 80px;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      /* STORAGE SECTION */
+    .storagesection{
+        position: absolute;
+        width: 100vw;
+        /* margin-right: 0px; */
+        background: rgba(255, 255, 255, 0.22);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.5px);
+        -webkit-backdrop-filter: blur(7.5px);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        /* end  */
+        padding: 40px;
+        font-size: 1.3rem;
+        display: none;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        animation-name: reveal;
+        animation-duration: 1s;
+        top: 100px;
+        left: 0%;
+        z-index: 10;
+        overflow-x: scroll;
+    }
+
+    .date{
+        font-size: 2rem;
+    }
+
+    .incomeUIsection{
+        background-color: rgb(217, 216, 216);
+        display: grid;
+        font-weight: 700;
+        width: 100%;
+        grid-template-columns: 5% 60% 30%;
+        justify-content: space-between;
+        padding: 10px 10px;
+        /* margin-bottom: 10px;
+        margin-top: 10px; */
+        margin:20px  auto;
+        position: relative;
+    }
+    
+    .expenseUIsection{
+        background-color: rgb(217, 216, 216);
+        display: grid;
+        font-weight: 700;
+        width: 100%;
+        grid-template-columns: 5% 60% 30%;
+        justify-content: space-between;
+        padding: 10px 10px;
+        /* margin-bottom: 10px;
+        margin-top: 10px; */
+        margin: 20px  auto;
+        position: relative;
     }
 }

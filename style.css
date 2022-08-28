@@ -282,7 +282,10 @@ button{
 
 
 .keyvaluesection2{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    /* padding: 10px; */
+    font-size: 1.8rem;
 }
 
 
@@ -335,13 +338,20 @@ button{
     display: none;
 }
 
+footer img{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    position: fixed;
+    cursor: pointer;
 
+  }
  
 /* START OF MEDIA QUERY SECTION BELOW */
 @media screen and (max-width: 800px) {
     body{
         text-align: center;
-        width: 90%;
+        width: 100%;
         overflow-x: hidden;
     }
     .mainUISection{
@@ -372,7 +382,7 @@ button{
     }
 
     .expenseUIsectionout{
-        padding-top: 30px;
+        /* padding-top: 30px; */
         color: black;
     }
 
@@ -383,7 +393,7 @@ button{
 
     .incomeUI{
         height: 15px;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         width: 300px;
         margin: auto;
         background: linear-gradient(145deg, #1b8619, #177115);
@@ -394,10 +404,11 @@ button{
         display: flex;
         justify-content: space-between;
         margin-top: 20px;
+        margin-left: 30px;
     }
     .expenseUI{
         height: 15px;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         width: 300px;
         margin: auto;
         /* background-color: red; */
@@ -411,6 +422,7 @@ button{
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
+        margin-left: 30px;
     }
 
     .mainsection{
@@ -500,7 +512,7 @@ button{
     }
 
     .date{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .incomeUIsection{

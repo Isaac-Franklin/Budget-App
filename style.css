@@ -1,0 +1,385 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: tahoma;
+}
+
+*:focus {
+    outline: none;
+    /* position: relative; */
+}
+
+
+body{
+    overflow-x: hidden;
+    background-image: url(images/budgetpic.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.container{
+    padding-top: 50px;
+}
+
+
+select{
+    font-size: 1rem;
+    background-color: green;
+}
+
+.inputform{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    outline: none;
+}
+
+/* input{
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+} */
+
+/* IMPORTER INPUT SECTION DATA */
+
+input {
+    border: none;
+    /* border-radius: 15px; */
+    color: whitesmoke;
+    text-align: center;
+    padding: 15px;
+    background-color: #000000ad;
+    box-shadow: 2px 2px 1px #ffffff00,-2px -2px 1px rgba(197, 197, 197, 0)c5;
+    font-size: 1rem;
+    font-weight: bold;
+    max-width: 600px;
+   }
+   
+/* END OF IMPORTED INPUT SECTON DATA */
+
+
+.mainfigure{
+    font-size: 3rem;
+}
+
+.incomeUI{
+    height: 30px;
+    font-size: 0.8rem;
+    width: 300px;
+    margin: auto;
+    background: linear-gradient(145deg, #1b8619, #177115);
+    box-shadow:  5px 5px 4px #146312,-5px -5px 4px #1e971c;
+    color: white;
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.expenseUI{
+    height: 30px;
+    font-size: 0.8rem;
+    width: 300px;
+    margin: auto;
+    /* background-color: red; */
+    border-radius: 0px;
+    background: linear-gradient(145deg, #f10a0a, #cb0808);
+    box-shadow:  5px 5px 4px #b20707,-5px -5px 4px #ff0b0b;
+    margin-top: 10px;
+    color: white;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainsection{
+    /* background-image: url(images/budgetpic.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    height: 230px;
+    width: 100vw;
+    padding: 20px;
+    color: white;
+    z-index: 5;
+    /* margin-bottom: 30px; */
+    
+}
+
+.enterdatasection{
+    background-color: transparent;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+
+.description, .amount{
+    height: 40px;
+    width: 300px;
+}
+
+.options{
+    height: 40px;
+    font-weight: bold;
+    /* padding: 10px; */
+    border: solid 2px black;
+    /* margin-bottom: 10px; */
+}
+
+button{
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    background-color: green;
+    border: none;
+    font-size: 1rem;
+    color: white
+}
+
+.mainUISection{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* background-color: ; */
+    justify-content: space-between;
+    padding: 30px;/* From https://css.glass */
+    background: rgba(255, 255, 255, 0.22);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(255, 255, 255, 0.07);;
+
+}
+
+.incomeUIsection{
+    background-color: rgb(217, 216, 216);
+    display: grid;
+    font-weight: 700;
+    width: 400px;
+    grid-template-columns: 5% 60% 30%;
+    justify-content: space-between;
+    padding: 10px 10px;
+    /* margin-bottom: 10px;
+    margin-top: 10px; */
+    margin:20px  auto;
+    position: relative;
+}
+
+.expenseUIsection{
+    background-color: rgb(217, 216, 216);
+    display: grid;
+    font-weight: 700;
+    width: 400px;
+    grid-template-columns: 5% 60% 30%;
+    justify-content: space-between;
+    padding: 10px 10px;
+    /* margin-bottom: 10px;
+    margin-top: 10px; */
+    margin: 20px  auto;
+    position: relative;
+}
+
+
+.amountandpercentage{
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 10px
+}
+
+.percentage{
+    padding-left: 10px;
+    color: red;
+    font-size: 13px
+}
+
+/* STORAGE SECTION */
+.storagesection{
+    position: absolute;
+    width: 80%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    /* end  */
+    padding: 40px;
+    font-size: 1.3rem;
+    display: none;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    animation-name: reveal;
+    animation-duration: 1s;
+    /* margin-top: -300px; */
+    top: 100px;
+    left: 10%;
+    z-index: 10;
+    overflow-x: scroll;
+}
+
+.storagebtn{
+      /* start of imported data */
+    background: rgb(0,128,0);
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    /* border-radius: 0.4em; */
+    box-shadow: 0.1em 0.1em;
+    width: 180px;
+    height: 50px;
+   }
+   
+   button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+   }
+   
+   button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+   }
+
+
+   /*end of imported data */ 
+@keyframes reveal {
+    from {top: -1000px}
+    to{top: 100px}
+    
+
+}
+
+.removeLocalstoragePage{
+    animation-name: noreveal;
+    animation-duration: 1s;
+    display: none;
+
+}
+@keyframes noreveal {
+    from {top: -1000px}
+    to{top: 100px; display: none;}
+
+}
+
+
+.keyvaluesection2{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+.showalldata {
+    --bg: #000;
+    --hover-bg: rgb(0,128,0);
+    --hover-text: #000;
+    color: #fff;
+    border: 1px solid var(--bg);
+    /* border-radius: 4px; */
+    margin-top: 10px;
+    padding: 0.8em 1em;
+    background: var(--bg);
+    transition: 0.2s;
+    width: 200px;
+    height: 60px;
+    font-weight: bold;
+  }
+  
+  .showalldata:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem,-0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+  }
+  
+  .showalldata:active {
+    transform: translate(0);
+    box-shadow: none;
+  }
+
+/* end of import */
+
+/* IMPORTED DATA FOR SAVE DATA BUTTON[ADD TO RECORD] */
+
+/* END OF YOUR IMPORT */
+
+
+.addbtn{
+    border: solid 3px black;
+}
+
+.incomeUIsectionout, .expenseUIsectionout{
+    text-align: center;
+}
+
+
+.line{
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .mainUISection{
+        width: 90%;
+        margin: auto;
+        display: list-item;
+        grid-template-columns: 100%;
+        /* color: whitesmoke; */
+        background-image: url(images/budgetpic.jpg);
+        justify-content: space-between;
+        padding: 30px;
+    
+    }
+
+    .incomeUIsectionout{
+        list-style: none;
+        color: black;
+        
+        /* color: black; */
+
+        
+    }
+
+    .incomeUIsectionout h2{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+
+
+    .expenseUIsectionout h2{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+
+    .expenseUIsectionout{
+        padding-top: 30px;
+        color: black;
+    }
+
+    .line{
+        margin-top: 30px;
+        display: block;
+    }
+    input{
+        padding: 10px;
+        text-align: center;
+        font-size: 1rem;
+    }
+    .inputform{
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: center;
+        outline: none;
+    }
+}

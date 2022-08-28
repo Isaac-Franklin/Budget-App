@@ -1,0 +1,78 @@
+<html>
+    <link rel="stylesheet" href="style.css">
+</html>
+<body>
+    <div class="container">
+        <div class="mainsection">
+            <div class="date">Available budget in July</div>
+            <div class="mainfigure">****</div>
+            <div class="incomeUI">
+                <h1>INCOME</h1>
+                <p class="incomeUInum">****</p>
+            </div>
+            <div class="expenseUI">
+                <h1>EXPENSE</h1>
+                <p class="expenseUInum">****</p>
+            </div>
+        </div>
+    
+        <!-- SELECTION SECTION -->
+        <div class="enterdatasection">
+            <select class="options">
+                <option value="income" selected>Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <input type="text" class="description box" placeholder="Enter Description">
+            <input type="text" class="amount box" placeholder="Enter Value">
+            <button class = "addbtn">Keep</button><br/>
+
+            <!-- /////// -->
+            <!-- <button class="learn-more addbtn">
+                <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+                </span>
+                <span class="button-text"> Add Record</span>
+            </button><br/><br/> -->
+            <!-- /////// -->
+            <button class="showalldata" >Show All Data History</button>
+        </div>
+
+        <!-- MAIN UI SECTION HERE -->
+        <div class="mainUISection">
+            <!-- INCOME SECTION -->
+            <div class="incomeUIsectionout">
+                <h2 id="texthere">INCOME[₦]</h2>
+                <!-- <div class="incomeUIsection" id="income-id">
+                    <p class="descriptionfigure">description</p>
+                    <p class="incometag"></p>
+                    <div class = "amountandpercentage">
+                        <p class="amountfigure">amount</p>
+                        <p class =""></p>
+                    </div>
+                </div> -->
+            <hr class="line">
+            </div>
+
+            <!-- EXPENCE SECTION -->
+            <div class="expenseUIsectionout">
+                <h2 id="texthere">EXPENSE[₦]</h2>
+                <!-- <div class="expenseUIsection" id="expense-id">
+                    <p class="descriptionfigure">description</p>
+                    <p class="expensetag"></p>
+                    <div class = "amountandpercentage">
+                        <p class="amountfigure">amount</p>
+                        <p class ="percentage">10%</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="storagesection">
+            <div class="keyvaluesection2"></div><br/><br/>
+            <button class="storagebtn" onclick="localStorage.clear(); location.reload()">Clear All Data</button>
+            <button class="storagebtn" onclick="removeLS()">Close</button>
+        </div>
+    </div>
+   
+   <script src="main.js"></script>
+   
+</body>

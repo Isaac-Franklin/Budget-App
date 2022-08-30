@@ -17,6 +17,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    height: 105%;
 
 }
 
@@ -353,6 +354,7 @@ footer img{
         text-align: center;
         width: 100%;
         overflow-x: hidden;
+        height: 105%;
     }
     .mainUISection{
         width: 98%;
@@ -432,7 +434,7 @@ footer img{
         background-attachment: fixed;
         text-align: center;
         height: 100%;
-        width: 90vw;
+        width: 100vw;
         padding: 20px;
         z-index: 5;
         

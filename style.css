@@ -61,7 +61,10 @@ input {
    
 /* END OF IMPORTED INPUT SECTON DATA */
 
-
+.date{
+    font-size: 3rem;
+    margin-bottom: -20px;
+}
 .mainfigure{
     font-size: 3rem;
 }
@@ -89,7 +92,6 @@ input {
     border-radius: 0px;
     background: linear-gradient(145deg, #f10a0a, #cb0808);
     box-shadow:  5px 5px 4px #b20707,-5px -5px 4px #ff0b0b;
-    margin-top: 10px;
     color: white;
     align-items: center;
     padding: 20px;
@@ -118,7 +120,7 @@ input {
     background-color: transparent;
     text-align: center;
     margin: auto;
-    padding: 20px;
+    padding: 70px;
 }
 
 .description, .amount{
@@ -161,13 +163,14 @@ button{
     grid-template-columns: 50% 50%;
     /* background-color: ; */
     justify-content: space-between;
-    padding: 30px;/* From https://css.glass */
+    padding: 30px;
+    /* From https://css.glass */
     background: rgba(255, 255, 255, 0.22);
     /* border-radius: 16px; */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.5px);
     -webkit-backdrop-filter: blur(7.5px);
-    border: 1px solid rgba(255, 255, 255, 0.07);;
+    border: 1px solid rgba(255, 255, 255, 0.07);
 
 }
 
@@ -298,7 +301,7 @@ button{
     color: #fff;
     border: 1px solid var(--bg);
     /* border-radius: 4px; */
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 0.8em 1em;
     background: var(--bg);
     transition: 0.2s;

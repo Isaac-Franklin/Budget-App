@@ -165,23 +165,41 @@ let storageSection = ((budgeSect) => {
 	let id = 1;
 	let inputs = budgeSect.getInputs();
 	let idPack = budgeSect.ID(inputs.option);
+	let incSum = 0;
+	let expSum = 0;
 	return {
 		activate: (input) => {
-			let dataObject, key, keyvalue;
-			// keyvaluesection = document.querySelector(".keyvaluesection2");
-			id = Math.floor(Math.random() * 30000000) + 1;
-			// id += id;
-			console.log(idPack);
-			console.log(id);
+			let dataObject, key, keyvalue, ID;
 			dataObject = {
 				Type: input.option,
 				Description: input.description,
 				Amount: input.amount,
 			};
+			id = Math.floor(Math.random() * 30000000) + 1;
+			// let amountHere = dataObject.Amount;
+			// for (let amountHere of dataObject)
+			// if (dataObject.Type === "income") {
+			// 	// let finalIncSum = 0;
+			// 	// incSum += dataObject.Amount;
+			// 	// finalIncSum += incSum;
+			// 	let amountHere = dataObject.Amount;
+			// 	amountHere.forEach((current) => {
+			// 		return (incSum += current);
+			// 	});
+			// 	console.log(incSum);
+			// } else if (dataObject.Type === "expense") {
+			// 	expSum += dataObject.Amount;
+			// 	console.log(incSum);
+			// }
+			ID = {
+				id: id,
+				incSum: incSum,
+				expSum: expSum,
+			};
 
 			keyvalue = JSON.parse(localStorage.getItem(dataObject));
-
-			localStorage.setItem(JSON.stringify(id), JSON.stringify(dataObject));
+			localStorage.setItem(JSON.stringify(ID), JSON.stringify(dataObject));
+			console.log(dataObject);
 		},
 
 		showData: () => {
@@ -194,13 +212,23 @@ let storageSection = ((budgeSect) => {
 					"beforeend",
 					` ${keyvalue}<br/><br/>`
 				);
+				// localStorage.getItem(key).forEach((cur) => {
+				// 	console.log(`${cur}`);
+				// });
+				// for (let key in localStorage) {
+				// 	console.log(`${key}`);
+				// }
 			}
 		},
+
+		// displayData: () => {
+		// 	console.log(JSON.stringify(dataObject));
+		// },
 	};
 })(budgetController);
 
 // GENERAL CONTROLLER SECTION
-let Controller = (function (uicontroller, budgetcontroller) {
+let Controller = (function (uicontroller, budgetcontroller, storageSection) {
 	let activateBudget, inputs, sayID, activateBudget2, values, storageData;
 
 	activateBudget2 = () => {
@@ -216,9 +244,10 @@ let Controller = (function (uicontroller, budgetcontroller) {
 	activateBudget = () => {
 		// showData.onclick = activate(inputs);
 		inputs = budgetcontroller.getInputs();
-		storageSection.activate(inputs);
+		let actvateStorage = storageSection.activate(inputs);
 		budgetController.test();
 		budgetController.clearAndRefresh();
+		// storageSection.displayData(actvateStorage.dataObject);
 		sayID = budgetController.ID(inputs.option);
 		console.log(sayID);
 		updateUI();
@@ -269,7 +298,7 @@ let Controller = (function (uicontroller, budgetcontroller) {
 			activation();
 		},
 	};
-})(UIController, budgetController);
+})(UIController, budgetController, storageSection);
 Controller.trigger2();
 Controller.trigger();
 // Controller.showStorageDetail();

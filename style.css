@@ -120,7 +120,8 @@ input {
     background-color: transparent;
     text-align: center;
     margin: auto;
-    padding: 70px;
+    padding: 70px 0px;
+    width: 100%;
 }
 
 .description, .amount{
